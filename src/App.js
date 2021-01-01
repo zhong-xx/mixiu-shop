@@ -1,11 +1,18 @@
 import React from 'react'
 import Frame from './components/Frame'
+import { Switch, Route } from 'react-router-dom'
+import { mainRoutes } from './routes'
 
 function App() {
   return (
     <Frame>
-      45
-      54
+      <Switch>
+        {
+          mainRoutes.map(route=> {
+            return <Route path={route.path} component={route.components} />
+          })
+        }
+      </Switch>
     </Frame>
   )
 }
