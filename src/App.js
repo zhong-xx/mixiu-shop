@@ -9,7 +9,7 @@ function App() {
       <Switch>
         {
           mainRoutes.map(route=> {
-            return <Route path={route.path} component={route.components} />
+            return <Route key={route.path} path={route.path} component={route.components} />
           })
         }
       </Switch>
